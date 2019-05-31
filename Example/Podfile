@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'JDQRCode_Example' do
+  pod 'JDQRCode', :path => '../'
+
+  target 'JDQRCode_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
