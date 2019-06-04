@@ -1,0 +1,6 @@
+framework module Pods_JDQRCode_Tests {
+  umbrella header "Pods-JDQRCode_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

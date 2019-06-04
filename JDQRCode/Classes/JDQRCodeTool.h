@@ -1,5 +1,5 @@
 //
-//  PQRCodeTool.h
+//  JDQRCodeTool.h
 //  qrCode
 //
 //  Created by plan on 2018/5/28.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PQRCodeTool : NSObject
+@interface JDQRCodeTool : NSObject
 
 /**打开手电筒*/
 + (void)openFlashlight;

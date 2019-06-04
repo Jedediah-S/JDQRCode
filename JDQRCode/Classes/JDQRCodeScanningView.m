@@ -1,5 +1,5 @@
 //
-//  PQRCodeScanningView.m
+//  JDQRCodeScanningView.m
 //  qrCode
 //
 //  Created by plan on 2018/5/23.
@@ -71,7 +71,7 @@
 - (void)startMoveScanningLine{
     
     CABasicAnimation *moveLineAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"];
-    moveLineAnimation.toValue = @(self.borderView.height-4);
+    moveLineAnimation.toValue = @(self.borderView.bounds.size.height-4);
     moveLineAnimation.duration = 2;
     moveLineAnimation.repeatCount = MAXFLOAT;
     [self.scanningLine.layer addAnimation:moveLineAnimation forKey:@"moveLineAnimation"];
@@ -94,7 +94,8 @@
     if(!_borderView){
         
         _borderView = [[UIImageView alloc] initWithFrame:CGRectMake(self.scanRect.origin.x-2, self.scanRect.origin.y-2, self.scanRect.size.width+4, self.scanRect.size.height+4)];
-        UIImage *image = [UIImage imageNamed:@"border_scan_icon"];
+        NSString *imagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"border_scan_icon.png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         //第一个是左边不拉伸区域的宽度，第二个参数是上面不拉伸的高度。
         image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
         _borderView.image = image;
@@ -105,8 +106,9 @@
     
     if(!_scanningLine){
         
-        _scanningLine = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, self.borderView.width-4, 2)];
-        _scanningLine.image = [UIImage imageNamed:@"scan_line_image"];
+        _scanningLine = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, self.borderView.bounds.size.width-4, 2)];
+        NSString *imagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"scan_line_image.png"];
+        _scanningLine.image = [UIImage imageWithContentsOfFile:imagePath];
     }
     return _scanningLine;
 }

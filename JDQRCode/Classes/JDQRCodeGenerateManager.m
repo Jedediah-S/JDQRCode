@@ -1,5 +1,5 @@
 //
-//  PQRCodeGenerateManager.m
+//  JDQRCodeGenerateManager.m
 //  qrCode
 //
 //  Created by plan on 2018/5/23.
@@ -61,7 +61,7 @@
 }
 
 /**生成彩色二维码*/
-+ (UIImage *)generateColorQRCodeWithString:(NSString *)string backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor{
++ (UIImage *)generateColorQRCodeWithString:(NSString *)string mainColor:(CIColor *)mainColor backgroundColor:(CIColor *)backgroundColor{
     
     CIImage *outputImage = [self generateQRCodeWithString:string];
     
@@ -74,8 +74,8 @@
     // 9.kvc 复制
     [colorFilter setValue:outputImage forKey:@"inputImage"];
     // 10.设置二维码颜色
-    [colorFilter setValue:backgroundColor forKey:@"inputColor0"];
-    [colorFilter setValue:mainColor forKey:@"inputColor1"];
+    [colorFilter setValue:mainColor forKey:@"inputColor0"];
+    [colorFilter setValue:backgroundColor forKey:@"inputColor1"];
     // 11.输出图片
     CIImage *colorImage = [colorFilter outputImage];
     

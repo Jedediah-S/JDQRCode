@@ -1,5 +1,5 @@
 //
-//  PQRCodeScanManager.h
+//  JDQRCodeScanManager.h
 //  qrCode
 //
 //  Created by plan on 2018/5/23.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-@class PQRCodeScanManager;
+@class JDQRCodeScanManager;
 
 @protocol PQRCodeScanManagerDelegate <NSObject>
 
@@ -17,7 +17,7 @@
 - (void)qrCodeScanManagerDidOutputMetadataObjects:(NSArray *)metadataObjects;
 
 @end
-@interface PQRCodeScanManager : NSObject
+@interface JDQRCodeScanManager : NSObject
 
 @property (nonatomic,weak) id<PQRCodeScanManagerDelegate>  delegate;
 

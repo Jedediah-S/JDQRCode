@@ -1,5 +1,5 @@
 //
-//  PQRCodeScanManager.m
+//  JDQRCodeScanManager.m
 //  qrCode
 //
 //  Created by plan on 2018/5/23.

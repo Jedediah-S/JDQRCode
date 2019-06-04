@@ -1,5 +1,5 @@
 //
-//  PQRCodeTool.m
+//  JDQRCodeTool.m
 //  qrCode
 //
 //  Created by plan on 2018/5/28.

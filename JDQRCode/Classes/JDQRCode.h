@@ -1,5 +1,5 @@
 //
-//  PQRCode.m
+//  JDQRCode.m
 //  qrCode
 //
 //  Created by plan on 2018/5/28.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "PQRCodeScanManager.h"
-#import "PQRCodeGenerateManager.h"
-#import "PQRCodeScanningView.h"
-#import "PQRCodeTool.h"
+#import "JDQRCodeScanManager.h"
+#import "JDQRCodeGenerateManager.h"
+#import "JDQRCodeScanningView.h"
+#import "JDQRCodeTool.h"

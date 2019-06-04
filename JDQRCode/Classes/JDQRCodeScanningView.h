@@ -1,5 +1,5 @@
 //
-//  PQRCodeScanningView.h
+//  JDQRCodeScanningView.h
 //  qrCode
 //
 //  Created by plan on 2018/5/23.

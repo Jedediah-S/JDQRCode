@@ -1,5 +1,5 @@
 //
-//  PQRCodeGenerateManager.h
+//  JDQRCodeGenerateManager.h
 //  qrCode
 //
 //  Created by plan on 2018/5/23.
@@ -14,7 +14,7 @@
 + (UIImage *)generateQRCodeWithString:(NSString *)string imageWidth:(CGFloat)imageWidth;
 
 /**生成彩色二维码*/
-+ (UIImage *)generateColorQRCodeWithString:(NSString *)string backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor;
++ (UIImage *)generateColorQRCodeWithString:(NSString *)string mainColor:(CIColor *)mainColor backgroundColor:(CIColor *)backgroundColor;
 
 /**生成一张带有logo的二维码*/
 + (UIImage *)generateLogoQRCodeWithString:(NSString *)string logoImageName:(NSString *)logoImageName logoScale:(CGFloat)logoScale;
